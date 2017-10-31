@@ -22,6 +22,7 @@ module Segment
       #
       def initialize(queue, app_id, options = {})
         symbolize_keys! options
+        @options = options
         @queue = queue
         @app_id = app_id
         @batch_size = options[:batch_size] || Queue::BATCH_SIZE
@@ -42,7 +43,7 @@ module Segment
             end
           end
 
-          res = Request.new.post @app_id, @batch
+          res = Request.new(@options).post @app_id, @batch
 
           @lock.synchronize { @batch.clear }
 
