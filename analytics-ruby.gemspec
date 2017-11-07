@@ -1,15 +1,15 @@
 require File.expand_path('../lib/segment/analytics/version', __FILE__)
 
 Gem::Specification.new do |spec|
-  spec.name    = 'analytics-ruby'
-  spec.version = Segment::Analytics::VERSION
+  spec.name    = 'astronomer'
+  spec.version = '2.0.14'
   spec.files   = Dir.glob('**/*')
   spec.require_paths = ['lib']
-  spec.summary = 'Segment.io analytics library'
-  spec.description = 'The Segment.io ruby analytics library'
-  spec.authors = ['Segment.io']
-  spec.email = 'friends@segment.io'
-  spec.homepage = 'https://github.com/segmentio/analytics-ruby'
+  spec.summary = 'Segment.io analytics library, adapted by Astronomer.io'
+  spec.description = 'The Segment.io ruby analytics library, adapted by Astronomer.io'
+  spec.authors = ['Segment.io', 'Astronomer.io']
+  spec.email = 'greg@astronomer.io'
+  spec.homepage = 'https://github.com/astronomerio/analytics-ruby.git'
   spec.license = 'MIT'
 
   # Ruby 1.8 requires json
