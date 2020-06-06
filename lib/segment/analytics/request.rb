@@ -15,6 +15,15 @@ module Segment
 
       # public: Creates a new request object to send analytics batch
       #
+      # options - Hash of request options
+      #           :host           - String of API hostname to send calls to
+      #           :port           - Fixnum of API port
+      #           :ssl            - Booleaan, true for secure API endpoint
+      #           :headers        - Hash of headers to send in request
+      #           :path           - String of API endpoint path
+      #           :retries        - Fixnum of times to retry request
+      #           :backoff        - Numeric seconds to sleep before retry
+      #
       def initialize(options = {})
         options[:host] ||= HOST
         options[:port] ||= PORT
